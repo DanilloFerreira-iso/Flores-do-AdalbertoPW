@@ -1,0 +1,252 @@
+:root {
+    --fundo-branco: #fff;
+    --fundo-branco-secundario: #e8e8e8;
+    --fundo-rodape: #d7d7d7; 
+}
+
+body {
+    font-family: Arial;
+    background-color: var(--fundo-branco-secundario);
+    color: #000000;
+    margin: 0; /*tira um espaço fudido que o navegador coloca por padrão*/
+    padding: 0; /*mesma coisa do margin, mas para o padding*/
+    background-attachment: fixed;
+}
+
+.barrac {
+    top: 0; 
+    position:relative;
+    width: 100%; /*ocupa toda a largura da tela */
+    display: flex;
+    justify-content: center; /*display flex e justify andam juntos */
+    align-items: center; /* fica na mesma linha */
+    border-bottom: 5px solid ;
+    height: 100px;
+    margin: 0 auto;
+    padding: 14px 6%;
+    box-sizing: border-box; /* considera o pading e a borda no tamanho do elemento */
+    z-index: 1000; /* garante que a barra fique acima de outros elementos */
+    background-color: var(--fundo-branco);
+}
+
+.barrac a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pgtop {
+    margin-right: 900px; /* gap between first and second item */
+}
+.carrinhotop {
+    margin: 0 20px; /* balanced spacing around middle item */
+}
+#logintop {
+    margin-left: 40px; /* gap between second and third item (matches first's right margin) */
+}
+.cabban {
+    position: relative;
+    overflow: hidden;
+}
+.modban {
+    display: flex;
+    width: 300%; /* 3 slides combined */
+    left: 50%;
+    position: relative;
+    margin-left: -50vw; /* full-bleed */
+}
+
+.modban .slide {
+    width: 33.3333%;
+    flex: 0 0 33.3333%;
+    position: relative;
+}
+
+.modban .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.slide {
+    position: relative;
+        border-bottom: 1px solid ;
+}
+
+.cabban {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.contlivr {
+    width: 60%;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column; /* stack title above mini containers */
+    align-items: center;
+    background-color: var(--fundo-branco);
+    margin-bottom: 60px;
+}
+
+.livros {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* align children (including .titcont) to top */
+    margin-bottom: 20px
+    
+}
+
+.flor img {
+    width: 100%;
+}
+
+.flor {
+    display: flex; /*deixa default em linha */
+    flex-direction: column; /*  direção que as infos do conainter ficam, agr é em coluna */
+    text-align: center;
+}
+
+.titcont {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.2);
+}
+
+.buqs {
+    padding-left: 20px;
+}
+
+.rodape {
+    margin-top: 20px;
+    background-color: var(--fundo-rodape);
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--fundo-rodape); /* por ser lista ele bota uns ponto na linha, colocando a cor dele igual a do fundo ele some */ 
+    margin-top: 60px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+.rodape a{
+    text-decoration: none;
+    color:#000000
+}
+
+.btncomp {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff8686;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.btnestq {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ff8686;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.btnestq:hover {
+    background-color: #ff4d4d;
+    cursor: pointer;
+}
+
+.btncomp:hover {
+    background-color: #ff4d4d;
+    cursor: pointer;
+}
+
+.titflor {
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.precoflor {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #6b1010;
+}
+
+.estoqflor {
+    font-size: 20px;
+    color: #515151;
+}
+
+.flor {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logcont {
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: var(--fundo-branco);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Keep the image on the left without moving the other inputs */
+.admimgflor {
+    float: left;
+    margin-right: 20px;
+
+}
+
+.admimgflor img {
+    width: 300px;
+    height: 300px;
+}
+
+.admflr {
+    overflow: hidden;
+}
+
+.campo-estoque {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.campo-estoque input {
+    flex: 1;
+}
+
+.status-estoque {
+    display: inline-block;
+    min-width: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.status-normal {
+    color: #0d7a31;
+}
+
+.status-poucas {
+    color: #b36b00;
+}
+
+.status-esgotado {
+    color: #a10000;
+}
+
+.admcont {
+    border-bottom: 1px solid rgba(102, 102, 102, 0.2)
+}
